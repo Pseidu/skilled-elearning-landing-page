@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+/*
+    gradient de FFFFFF a F0F1FF
+    background-image: linear-gradient(var(#FFFFFF, var(--gradientGrey));
+*/
+:root {
+    --gradientGrey: #F0F1FF;
+    --darkBlue: #13183F;
+    --gradientViolet: #4851FF;
+    --gradientPink: #F02AA6;
+    --gradientOrange: #FF6F48;
+    --textDescriptionGrey: #83869A;
+    --joinCoursePink: #F74780;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    color: var(--textDescriptionGrey);
+
+    background-color: #FFFFFF;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px 0;
+}
+
+.logo {
+    width: 89px;
+}
+
+p {
+    line-height: 1.625em;
+}
+
+.btn1 {
+    width: 140px;
+    height: 48px;
+    border-radius: 28px;
+    text-align: center;
+    line-height: 48px; /* CSS trick to center vertically: line-height = height */
+    text-decoration: none;
+    z-index: 1;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+header a {
+    background-color: var(--darkBlue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div {
+    padding: 0 16px;
+}
+
+.heading-XL {
+    font-weight: 800;
+    font-size: 2.5em;
+    color: var(--darkBlue);
+    margin-top: 36px;
+    margin-bottom: 26px;
+}
+
+.btn2 {
+    display: block;
+
+    margin-top: 24px;
+    margin-bottom: 26px;
+    width: 157px;
+    height: 56px;
+
+    border-radius: 28px;
+    text-align: center;
+    line-height: 56px; /* CSS trick to center vertically: line-height = height */
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    background-image: linear-gradient(var(--gradientOrange), var(--gradientPink));
+}
+
+img.hero {
+    object-position: -47px;
+}
+
+div.cards {
+    display: flex;
+    flex-direction: column;
+
+    background-image: linear-gradient(#FFFFFF, var(--gradientGrey));
+    padding-bottom: 59px;
+}
+
+div.first-card {
+    min-height: 120px;
+    background-image: linear-gradient(var(--gradientOrange), var(--gradientPink));
+    border-radius: 10px;
+
+    margin-top: -26px;
+    margin-bottom: 20px;
+    padding: 24px 28px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+div.card {
+    background-color: #FFFFFF;
+    margin: 20px 0;
+    border-radius: 10px;
+
+    position: relative;
+    padding: 0 28px;
+}
+
+div.card img {
+    position: absolute;
+    top: -24px;
+    left: 28px;
+}
+
+.heading-S {
+    font-size: 1.25em;
+    font-weight: 800;
+    color: var(--darkBlue);
+    margin-top: 56px;
+    margin-bottom: 18px;
+}
+
+div.card a {
+    text-decoration: none;
+    color: var(--joinCoursePink);
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 1.75em;
+    display: block;
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 120px;
+    background-color: var(--darkBlue);
+    padding: 0 16px;
+}
+
+footer a {
+    background-image: linear-gradient(var(--gradientViolet), var(--gradientPink));
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    header {
+        padding: 25px 39px 0;
+    }
+
+    main > div {
+        padding: 0 39px;
+    }
+
+    div.heading{
+        width: 57%;
+        padding: 60px 0 0;
+    }
+
+    img.hero {
+        width: 725px;
+        position: absolute;
+        top: -100px;
+        right: -360px;
+    }
+
+    div.cards {
+        margin-top: 210px;
+
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 11px;
+    }
+
+    div.first-card {
+        margin-top: 20px;
+        padding-top: 56px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    main {
+        position: relative;
+        overflow: hidden;
+    }
+
+    header {
+        padding: 24px 165px 0;
+    }
+
+    .logo {
+        width: initial;
+    }
+
+    .btn1 {
+        width: 168px;
+        height: 56px;
+        line-height: 56px; /* Trick to center vertically: line-height = height */
+        font-size: 1.125em;
+    }
+
+    main > div {
+        padding: 0 165px;
+    }
+
+    div.heading{
+        width: 45%;
+        padding: 60px 0 0;
+    }
+
+    .heading-XL {
+        font-size: 3.5em;
+        line-height: 4.375rem;
+        
+        margin-top: 110px;
+        margin-bottom: 26px;
+    }
+
+    p {
+        font-size: 1.125em;
+        line-height: 1.75em;
+    }
+
+    .btn2 {
+        margin-top: 35px;
+        margin-bottom: 26px;
+        width: 167px;
+        height: 63px;
+        border-radius: 31.5px;
+    
+        font-size: 1.125em;
+        line-height: 63px; /* CSS trick to center vertically: line-height = height */
+    }
+
+    img.hero {
+        width: 1050px;
+        position: absolute;
+        top: -150px;
+        right: -390px;
+    }
+
+    div.cards {
+        margin-top: 210px;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 40px 31px;
+    }
+
+    div.first-card {
+        min-height: 322px;
+        max-width: 350px;
+
+        margin-top: 20px;
+        padding: 64px 32px 0 50px;
+
+        border-radius: 15px;
+
+        font-size: 2em;
+        line-height: 2.5rem;
+    }
+
+    .card {
+        min-height: 322px;
+        max-width: 350px;
+    }
+
+    footer {
+        margin-top: 66px;
+        padding: 0 165px;
+    }
+    
+    footer span {
+        font-size: 2.25em;
+    }
+}
